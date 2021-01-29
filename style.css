@@ -72,7 +72,7 @@ header {
     margin-right: auto;
     margin-top: -16px;
 }
-@media all and (max-device-width: 480px)
+@media all and (max-width: 1024px)
 {
     header {
         display: none;
