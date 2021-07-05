@@ -16,8 +16,11 @@
 	}
 }
 
-.menu{
+.footer.menu{
+	margin-top: -100px;
+}
 
+.menu{
     &__container{
         max-width: 1280px;
         margin: auto;
@@ -31,7 +34,17 @@
 
     &__title{
         padding-top: 2rem;
+
+		&__icon{
+			float: right;
+			margin-top: -55px;
+		}
     }
+
+	&__button{
+		text-align: center;
+		padding-bottom: 3rem;
+	}
 
     &__card{
 		background-color: white;
@@ -41,13 +54,15 @@
 		display: flex;
 		align-items: flex-end;
 		margin-bottom: 1rem;
+		overflow: hidden;
+		animation: appear 0.5s;
 
 		&__container{
 			padding-bottom: 1rem;
 
 			h4{
 				font-weight: 200;
-				border-bottom: 2.5px solid #99E2D0;
+				border-bottom: 2.5px solid $color-tertiary;
 				width: 40px;
 				padding-bottom: 0.2rem;
 			}
@@ -70,19 +85,45 @@
 		&__price{
 			font-weight: bold;
 		}
+
+		&__checkContainer{
+			background-color: $color-tertiary;
+    		margin: -1rem -5rem -1rem 1rem;
+    		width: 4rem;
+    		display:flex;
+    		align-items:center;
+    		justify-content:center;
+    		transition-duration: 0.5s;
+			height: 4rem;
+		}
+
+		&__check {
+			height: 1.6rem;
+			width: 1.6rem;
+			background-color: white;
+			display:flex;
+			align-items:center;
+			justify-content:center;
+			border-radius: 100px;
+			transform: rotate(180deg);
+			transition-duration: 0.5s;
+		}
+
+		&__checkIcon {
+			color: $color-tertiary;
+		}
+
+		&:hover{
+			.menu__card__checkContainer{
+				margin-right: -1rem;
+			}
+			.menu__card__check {
+				transform: rotate(0);
+			}
+		}
 	}
 
-	&__button{
-		text-align: center;
-		padding-bottom: 3rem;
+	.restaurant__card__icon.empty.menu{
+		background: #f6f6f6;
 	}
-}
-
-.menu__title__icon{
-	float: right;
-	margin-top: -55px;
-}
-
-.footer.menu{
-	margin-top: -100px;
 }
